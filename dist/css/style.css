@@ -54,11 +54,13 @@ img {
 
 .navbar .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .navbar .logo {
-    font-size: 2rem;
+    height: 60px;
+    width: 100%;
+    object-fit: contain;
 }
 
 .navbar .nav {
@@ -282,8 +284,22 @@ img {
     }
 
     .section-a .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         text-align: center;
+        height: auto;
+    }
+
+    .section-a img {
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .section-a h1 {
+        font-size: 33px;
+    }
+
+    .section-a a {
+        margin-bottom: 2rem;
     }
 
     .section-a .container div:first-child {
@@ -330,4 +346,20 @@ img {
         display: none;
     }
 
+}
+
+@media(max-width: 380px) {
+    .section-a h1{
+        font-size: 20px;
+    }
+
+    .section-a  p {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 322px) {
+    .section-a img {
+        display: none;
+    }
 }
